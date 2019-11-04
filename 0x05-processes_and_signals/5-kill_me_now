@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Kills a process
+pid_4=pgrep 4-to_infinity_and_beyond
+kil pid_4
