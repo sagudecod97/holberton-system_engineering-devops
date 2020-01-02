@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Configure Nginx so that its HTTP response contains a custom header
+apt-get update
+apt-get -y install nginx
+http_header="add_header X-Served-By $HOSTNAME;"
+sed -i "/sendfile on;/a $http_header" /etc/nginx/nginx.conf
+service nginx restart
