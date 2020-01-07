@@ -13,7 +13,7 @@ print_domain()
     # 2 argv exists
     else
         printf "The subdomain %s is a " "$2"
-        dig "$2"."$1" |  awk 'f;/ANSWER SECTION:/{f=1}' | head -n 1 | awk '{print $4 " record and points to " $5}'
+        dig "$2.$1" |  awk 'f;/ANSWER SECTION:/{f=1}' | head -n 1 | awk '{print $4 " record and points to " $5}'
     fi
 }
 print_domain "$1" "$2"
