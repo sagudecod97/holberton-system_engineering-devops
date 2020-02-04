@@ -11,11 +11,11 @@ if __name__ == "__main__":
     user = sys.argv[1]
     url = "https://jsonplaceholder.typicode.com/"
 
-    request_tasks = requests.get(url + "todos/?userid={}".format(user)).json()
+    request_tasks = requests.get(url + "todos/?userid=4".format(user)).json()
     request_user = requests.get(url + "users/{}".format(user)).json()
 
     for task in request_tasks:
-        if task["completed"] and task["userId"] == 4:
+        if task["completed"] and task["userId"] == int(user):
             tasks_completed += 1
             arr_tasks_title.append(task["title"])
         total_tasks += 1
