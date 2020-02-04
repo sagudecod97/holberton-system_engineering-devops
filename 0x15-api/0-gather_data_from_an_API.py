@@ -23,4 +23,4 @@ if __name__ == "__main__":
     print("Employee {} is done with tasks({}/{}):"
           .format(request_user["name"], tasks_completed, total_tasks))
     for task in arr_tasks_title:
-        print("\t {}".format(task))
+        print("     {}".format(task))
