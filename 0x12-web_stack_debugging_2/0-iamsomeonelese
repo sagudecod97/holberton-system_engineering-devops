@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Show the current user
+sudo -H -u "$1" whoami
